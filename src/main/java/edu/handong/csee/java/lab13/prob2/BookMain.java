@@ -4,16 +4,14 @@ public class BookMain {
 
 	public static void main(String[] args) {
 		
-		Book b1 = new Book("1984");
+		Book book = new Book("1984");
+		History history = new History("Korean History","Kwon Hyun Woo");
+		Science science = new Science("Basic Physics", "Newton");
 		
-		Book s1 = new Science();
-	
-		b1.printBook();
-		
-		s1.Science("Lovely Planet", "Newton");
-		
-		
-		
+		book.show();
+		science.show();
+		history.show();
+
 
 	}
 

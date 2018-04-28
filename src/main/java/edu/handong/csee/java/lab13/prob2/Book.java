@@ -2,39 +2,31 @@ package edu.handong.csee.java.lab13.prob2;
 
 public class Book {
 	
-	private static int idNumber = 0;
-	private String Title;
+	//public Book() {} // explicit default constructor(not necessary)
 	
-	public void Book(String title) {
-		this.Title = title;
-		this.idNumber = ++idNumber;
+	private static int idCount = 0; // reason for static modifier is that later on I'm gonna use this integer value at other classes.
+	private String BookName;
+	private int id = 0;
+	
+	public Book(String Name) // a public constructor 'Book'
+	{
+		this.BookName = Name; // assigning value to private BookName
+		idCount++;
+		id = idCount; // assigning value to private int id
 	}
 	
-	public void printBook() {
-		System.out.println("<<<BOOK>>>");
-		System.out.println("ID : " + idNumber);
-		System.out.println("Book Name : " + Title);
+	public String toString() // printing out sentence with id and BookName
+	{
+		return "\n\tId : " + id + "\n\tBook Name : " + BookName;
+		
+	}
+	
+	public void show() // printing out sentence from toString
+	{
+		System.out.println("<<<BOOK>>>" + this.toString());
 	}
 	
 	
-	
-	
-	// getters and setters for private variables, Strings.
-	// actually, setters are pointless here.
-	/*public int getIdNumber() {
-		return idNumber;
-	}
-	public void setIdNumber(int idNumber) {
-		this.idNumber = idNumber;
-	}
-
-	public String getTitle() {
-		return Title;
-	}
-
-	public void setTitle(String title) {
-		Title = title;
-	}*/
 	
 	
 

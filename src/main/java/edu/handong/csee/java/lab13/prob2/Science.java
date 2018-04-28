@@ -2,29 +2,27 @@ package edu.handong.csee.java.lab13.prob2;
 
 public class Science extends Book {
 
-	private String Publisher;
+	private String publisher;
 	
-	public Science(String title, String publisher) 
+	public Science(String Name, String Publisher)
 	{
-		super(title);
-		this.Publisher = publisher;
+		super(Name); // Calling constructor from Book Class.
+		// this initializes the variables. (in this case, with name)
+		this.publisher = Publisher;
+		
 	}
 	
-	public void printScience() {
+	public String toString() {
 		
-		System.out.println("<<<Science>>>");
-		System.out.println("ID : " + getIdNumber());
-		System.out.println("Book Name : " + getTitle());
-		System.out.println("Publisher : " + getPublisher());
+		return super.toString() + "\n\tPublisher : " + this.publisher; 
+	}// returning the method(from superclass) result + String from this class.
+	// \n is changing line, and \t is putting a tab.
+	
+	public void show() {
+		
+		System.out.println("<<<Science>>>" + this.toString());
 	}
-
-	public String getPublisher() {
-		return Publisher;
-	}
-
-	public void setPublisher(String publisher) {
-		Publisher = publisher;
-	}
+	
 	
 	
 }

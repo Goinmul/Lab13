@@ -6,7 +6,7 @@ public class Science extends Book {
 	
 	public Science(String title, String publisher) 
 	{
-		super();
+		super(title);
 		this.Publisher = publisher;
 	}
 	

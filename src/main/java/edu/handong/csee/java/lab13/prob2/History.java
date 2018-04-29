@@ -17,7 +17,7 @@ public class History extends Book {
 	// plus, I want to add author, which is overridden in this class.
 
 	public void show() {
-		System.out.println("<<<History>>>" + this.toString());
+		System.out.println("<<<History>>>" + this.toString()); // simple method showing a sentence.
 
 
 	}

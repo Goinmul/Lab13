@@ -4,15 +4,17 @@ public class FriendMain {
 
 	public static void main(String[] args) {
 
-		//Friend - SchoolFriend - ClassFriend 
+		//Friend - SchoolFriend - ClassFriend  (hierarchy)
+		// Instantiating classes.
 		InstanceOf ins = new InstanceOf();
 		Friend fd = new Friend();
 		ClassFriend cfd = new ClassFriend();
 		SchoolFriend sfd = new SchoolFriend();
 
-		ins.WhatFriend(fd);
-		ins.WhatFriend(sfd);
-		ins.WhatFriend(cfd);
+		//invoking whatFriend method.
+		ins.whatFriend(fd);
+		ins.whatFriend(sfd);
+		ins.whatFriend(cfd);
 
 
 	}

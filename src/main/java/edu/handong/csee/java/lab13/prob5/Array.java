@@ -34,13 +34,8 @@ public class Array {
 			}
 			else return 2; // condition of count => 3
 			
-			
-			
 		}
-		
-		
-		
-		
 
 	}
+	
 }

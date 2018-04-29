@@ -6,11 +6,11 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int row1, col1, row2, col2;
+		int row1, col1, row2, col2; // integers to use.
 
-		Scanner keyboard = new Scanner(System.in);
+		Scanner keyboard = new Scanner(System.in); // instantiating Scanner
 
-
+		//getting the size(rows and columns) of the array that you are going to make.
 		System.out.println("For the first array,");
 		System.out.print("Enter row size(maximum 5) : ");
 		row1 = keyboard.nextInt();
@@ -19,18 +19,20 @@ public class Main {
 		col1 = keyboard.nextInt();
 		System.out.println();
 
+		//getting the size(rows and columns) of the array that you are going to make. Same as above.
 		System.out.println("For the second array,");
 		System.out.print("Enter row size(maximum 5) : ");
 		row2 = keyboard.nextInt();
 		System.out.print("Enter column size(maximum 5) : ");
 		col2 = keyboard.nextInt();
 
+		//Instantiating two arrays, with the size of user input.
 		int[][] myArray1 = new int[row1][col1];
 		int[][] myArray2 = new int[row2][col2];
 
 		//getting value to first list
 		System.out.println("Enter List1 : ");
-		for (int i=0; i<myArray1.length;i++)//double iteration
+		for (int i=0; i<myArray1.length;i++)//double iteration, iterate row1*col1 times
 		{
 			for(int j = 0; j<myArray1[i].length;j++)
 			{
@@ -40,7 +42,7 @@ public class Main {
 
 		}
 
-		//same as first list. Giving values to the second list
+		//Just the same as first list(right above). Giving values to the second list
 		System.out.println("Enter List2 : ");
 		for (int i=0; i<myArray2.length;i++)
 		{
@@ -64,7 +66,7 @@ public class Main {
 		}
 		System.out.println();
 
-		//printing out all the values of list
+		//printing out all the values of list(same as above)
 		System.out.println("Second array : ");
 		for (int i=0; i<myArray2.length;i++)
 		{
@@ -77,7 +79,8 @@ public class Main {
 
 		System.out.println();
 		
-		Array inst1 = new Array();
+		Array inst1 = new Array(); // Instantiating Array Class to use the equals() method.
+		//there are 4 different conditions, see below.
 
 		if (inst1.equals(myArray1, myArray2) == -1) { // different in row size
 			System.out.println("The two arrays are different.");
